@@ -8,13 +8,11 @@ jobs:
     strategy:
         matrix:
           os: [ubuntu-latest, macos-latest]
-        fail-fast: false
     steps:
-    - uses: actions/checkout@v1
 
-    - name: Default bash
-      run: ./exit.sh
+    - name: No shell specified (default bash)
+      run: echo Hello, world!
 
-    - name: Shell bash
-      run: ./exit.sh
+    - name: Shell specified as bash
+      run: echo Hello, world!
       shell: bash
