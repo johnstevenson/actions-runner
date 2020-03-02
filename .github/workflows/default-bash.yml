@@ -4,12 +4,16 @@ on: [push]
 jobs:
   test:
 
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+        matrix:
+          os: [ubuntu-latest, macos-latest]
+        fail-fast: false
     steps:
     - uses: actions/checkout@v1
 
     - name: Default bash
-      run: bash ./exit.sh
+      run: ./exit.sh
 
     - name: Shell bash
       run: ./exit.sh
