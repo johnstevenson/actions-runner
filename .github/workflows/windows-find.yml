@@ -6,6 +6,13 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - name: Windows find
+    - name: Windows find from path
       run: echo "Hello world" | find /i "hello"
       shell: cmd
+
+    - name: Windows find from system32
+      run: |
+        set find="C:\Windows\System32\find.exe"
+        echo "Hello world" | %find% /i "hello"
+      shell: cmd
+      if: always()
