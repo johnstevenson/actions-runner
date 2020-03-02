@@ -1,0 +1,15 @@
+# https://help.github.com/en/categories/automating-your-workflow-with-github-actions
+
+on:
+  - pull_request
+  - push
+name: Windows find
+# comment
+jobs:
+  test:
+    runs-on: windows-latest
+
+    steps:
+    - name: Windows find
+      run: echo "Hello world" | find /i "hello"
+      shell: cmd

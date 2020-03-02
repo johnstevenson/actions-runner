@@ -1,3 +1,6 @@
+on:
+  - pull_request
+  - push
 name: Default Bash
 on: [push]
 
