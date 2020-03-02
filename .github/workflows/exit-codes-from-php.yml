@@ -1,8 +1,8 @@
-name: Exit Codes
+name: Exit Codes from Php
 on: [push]
 
 jobs:
-  test-exit-php:
+  test:
 
     runs-on: ${{ matrix.os }}
     strategy:

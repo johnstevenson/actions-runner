@@ -1,8 +1,8 @@
-name: Exit Codes
+name: Exit Codes from Script
 on: [push]
 
 jobs:
-  test-exit-script:
+  test:
 
     runs-on: ${{ matrix.os }}
     strategy:
